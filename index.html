@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akgün Emlak Gayrimenkul</title>
-    <!-- Sekmedeki logo: Küçük Sarı Ev -->
+    <!-- Sekmedeki küçük sarı ev logosu -->
     <link rel="icon" type="image/png" sizes="32x32" href="https://imgur.com">
     <link rel="shortcut icon" type="image/png" href="https://imgur.com">
     <link href="https://googleapis.com" rel="stylesheet">
@@ -17,7 +17,7 @@
         }
 
         body {
-            /* Arkada şık, lüks bir ev ve mutlu aile görseli içeren premium arka plan */
+            /* Arkada şık ve resmi lüks villa görseli */
             background: linear-gradient(rgba(30, 30, 36, 0.85), rgba(30, 30, 36, 0.92)), 
                         url('https://unsplash.com');
             background-size: cover;
@@ -56,7 +56,6 @@
             letter-spacing: 4px;
             margin-top: 5px;
             text-transform: uppercase;
-            text-shadow: 1px 2px 5px rgba(0,0,0,0.5);
         }
 
         .main-container {
@@ -127,14 +126,13 @@
             border-radius: 50%;
         }
 
-        /* Kurumsal Kurumsal Buton Grubu */
+        /* Buton Grubu */
         .button-group {
             display: flex;
             gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
             width: 100%;
-            margin-bottom: 10px;
         }
 
         .nav-btn {
@@ -189,7 +187,7 @@
             transform: translateY(-3px);
         }
 
-        /* İstediğiniz Açılır Liste (Accordion) Bölümü */
+        /* Açılır Liste Bölümü */
         .list-container {
             width: 100%;
             max-width: 600px;
@@ -213,7 +211,6 @@
             background: rgba(255, 255, 255, 0.09);
         }
 
-        /* Gizli checkbox mantığı ile tıklandığında açılma */
         .accordion-input {
             display: none;
         }
@@ -249,7 +246,6 @@
             padding: 10px 0;
         }
 
-        /* Aşağı uzanan listenin şık elemanları */
         .accordion-content li {
             padding: 14px 30px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.04);
@@ -259,16 +255,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: background 0.2s ease;
         }
 
         .accordion-content li:last-child {
             border-bottom: none;
-        }
-
-        .accordion-content li:hover {
-            background: rgba(241, 184, 19, 0.1);
-            color: #ffffff;
         }
 
         .go-btn {
@@ -282,7 +272,6 @@
             text-transform: uppercase;
         }
 
-        /* Tıklandığında listenin aşağı doğru uzaması */
         .accordion-input:checked ~ .accordion-content {
             max-height: 300px;
         }
@@ -309,7 +298,6 @@
             font-weight: 700;
             color: #ffffff;
             letter-spacing: 1px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
         .services-text span {
@@ -334,7 +322,6 @@
             color: #ffffff;
             text-decoration: none;
             transition: color 0.3s ease;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
         .phone-link:hover {
@@ -349,3 +336,23 @@
 
         @media (max-width: 768px) {
             body { padding: 20px 10px; }
+            .brand-title { font-size: 2.2rem; }
+            .brand-subtitle { font-size: 1rem; }
+            footer { flex-direction: column; text-align: center; }
+            .contact-info { text-align: center; }
+            .phone-link { font-size: 1.4rem; }
+            .nav-btn { min-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="brand-title"><span>AKGÜN</span> EMLAK</h1>
+        <div class="brand-subtitle">GAYRİMENKUL</div>
+    </header>
+
+    <div class="main-container">
+        <!-- Hareketli Sarı Ev Sembolü -->
+        <div class="logo-icon">
+            <div class="windows"></div>
