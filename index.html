@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akgün Emlak Gayrimenkul</title>
-    <!-- Sekmedeki logoyu küçük sarı ev logosu olarak gösteren kırılmaz linkler -->
+    <!-- Sekmedeki logo: Küçük Sarı Ev -->
     <link rel="icon" type="image/png" sizes="32x32" href="https://imgur.com">
     <link rel="shortcut icon" type="image/png" href="https://imgur.com">
     <link href="https://googleapis.com" rel="stylesheet">
@@ -17,9 +17,12 @@
         }
 
         body {
-            background: linear-gradient(135deg, #1e1e24 0%, #2a2b36 50%, #3d2635 100%);
+            /* Arkada şık, lüks bir ev ve mutlu aile görseli içeren premium arka plan */
+            background: linear-gradient(rgba(30, 30, 36, 0.85), rgba(30, 30, 36, 0.92)), 
+                        url('https://unsplash.com');
             background-size: cover;
             background-attachment: fixed;
+            background-position: center;
             color: #ffffff;
             min-height: 100vh;
             display: flex;
@@ -39,7 +42,7 @@
             font-weight: 800;
             letter-spacing: 2px;
             text-transform: uppercase;
-            text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+            text-shadow: 2px 4px 10px rgba(0,0,0,0.7);
         }
 
         .brand-title span {
@@ -53,6 +56,7 @@
             letter-spacing: 4px;
             margin-top: 5px;
             text-transform: uppercase;
+            text-shadow: 1px 2px 5px rgba(0,0,0,0.5);
         }
 
         .main-container {
@@ -67,14 +71,14 @@
             max-width: 900px;
         }
 
-        /* İstediğiniz O İlk Basit ve Hareketli Sarı Ev Sembolü Tasarımı */
+        /* Ortadaki Hareketli Küçük Sarı Ev Sembolü */
         .logo-icon {
-            width: 120px;
-            height: 150px;
+            width: 110px;
+            height: 140px;
             background-color: #f1b813;
             border-radius: 18px;
             position: relative;
-            box-shadow: 0 10px 30px rgba(241, 184, 19, 0.3);
+            box-shadow: 0 10px 30px rgba(241, 184, 19, 0.4);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -84,29 +88,29 @@
         .logo-icon::before {
             content: '';
             position: absolute;
-            top: 35px;
+            top: 30px;
             width: 0;
             height: 0;
-            border-left: 30px solid transparent;
-            border-right: 30px solid transparent;
-            border-bottom: 30px solid #2a2b36;
+            border-left: 28px solid transparent;
+            border-right: 28px solid transparent;
+            border-bottom: 28px solid #2a2b36;
         }
 
         .logo-icon::after {
             content: '';
             position: absolute;
-            top: 65px;
-            width: 44px;
-            height: 40px;
+            top: 58px;
+            width: 40px;
+            height: 38px;
             background-color: #2a2b36;
         }
 
         .windows {
             position: absolute;
-            top: 73px;
+            top: 66px;
             z-index: 2;
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             display: grid;
             grid-template-columns: repeat(2, 1px);
             gap: 4px;
@@ -117,18 +121,20 @@
         .phone-button {
             position: absolute;
             bottom: 12px;
-            width: 14px;
-            height: 14px;
+            width: 12px;
+            height: 12px;
             background-color: #ffffff;
             border-radius: 50%;
         }
 
+        /* Kurumsal Kurumsal Buton Grubu */
         .button-group {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
             width: 100%;
+            margin-bottom: 10px;
         }
 
         .nav-btn {
@@ -137,18 +143,17 @@
             justify-content: center;
             color: #1e1e24;
             text-decoration: none;
-            padding: 16px 30px;
-            font-size: 1.05rem;
+            padding: 15px 25px;
+            font-size: 1rem;
             font-weight: 700;
             border-radius: 50px;
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
             border: 2px solid transparent;
-            min-width: 270px;
+            min-width: 260px;
         }
 
-        /* Sahibinden Sarı Buton */
         .sahibinden-btn {
             background-color: #f1b813;
             box-shadow: 0 6px 20px rgba(241, 184, 19, 0.3);
@@ -160,7 +165,6 @@
             transform: translateY(-3px);
         }
 
-        /* Emlakjet Yeşil Buton */
         .emlakjet-btn {
             background-color: #00d26a;
             color: #ffffff;
@@ -173,7 +177,6 @@
             transform: translateY(-3px);
         }
 
-        /* Facebook Mavi Buton */
         .facebook-btn {
             background-color: #1877f2;
             color: #ffffff;
@@ -186,15 +189,117 @@
             transform: translateY(-3px);
         }
 
+        /* İstediğiniz Açılır Liste (Accordion) Bölümü */
+        .list-container {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .accordion-item {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item:hover {
+            border-color: rgba(241, 184, 19, 0.5);
+            background: rgba(255, 255, 255, 0.09);
+        }
+
+        /* Gizli checkbox mantığı ile tıklandığında açılma */
+        .accordion-input {
+            display: none;
+        }
+
+        .accordion-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            user-select: none;
+        }
+
+        .accordion-label::after {
+            content: '▼';
+            font-size: 0.9rem;
+            color: #f1b813;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            transition: max-height 0.4s ease-out;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .accordion-content ul {
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        /* Aşağı uzanan listenin şık elemanları */
+        .accordion-content li {
+            padding: 14px 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            font-size: 1.05rem;
+            color: #e5e7eb;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s ease;
+        }
+
+        .accordion-content li:last-child {
+            border-bottom: none;
+        }
+
+        .accordion-content li:hover {
+            background: rgba(241, 184, 19, 0.1);
+            color: #ffffff;
+        }
+
+        .go-btn {
+            font-size: 0.85rem;
+            background: #f1b813;
+            color: #1e1e24;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        /* Tıklandığında listenin aşağı doğru uzaması */
+        .accordion-input:checked ~ .accordion-content {
+            max-height: 300px;
+        }
+
+        .accordion-input:checked ~ .accordion-label::after {
+            transform: rotate(180deg);
+        }
+
         footer {
             width: 100%;
             max-width: 1000px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-top: 2px solid rgba(255,255,255,0.1);
-            padding-top: 30px;
-            margin-top: 30px;
+            border-top: 2px solid rgba(255,255,255,0.15);
+            padding-top: 25px;
+            margin-top: 35px;
             flex-wrap: wrap;
             gap: 20px;
         }
@@ -204,6 +309,7 @@
             font-weight: 700;
             color: #ffffff;
             letter-spacing: 1px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
         .services-text span {
@@ -216,7 +322,7 @@
 
         .agent-name {
             font-size: 0.9rem;
-            color: #9ca3af;
+            color: #d1d5db;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 3px;
@@ -228,13 +334,13 @@
             color: #ffffff;
             text-decoration: none;
             transition: color 0.3s ease;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
         .phone-link:hover {
             color: #f1b813;
         }
 
-        /* Sürekli Yüzen Hareket Efekti */
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
@@ -243,56 +349,3 @@
 
         @media (max-width: 768px) {
             body { padding: 20px 10px; }
-            .brand-title { font-size: 2.2rem; }
-            .brand-subtitle { font-size: 1rem; }
-            footer { flex-direction: column; text-align: center; }
-            .contact-info { text-align: center; }
-            .phone-link { font-size: 1.4rem; }
-            .nav-btn { min-width: 100%; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1 class="brand-title"><span>AKGÜN</span> EMLAK</h1>
-        <div class="brand-subtitle">GAYRİMENKUL</div>
-    </header>
-
-    <div class="main-container">
-        <!-- Geri Getirilen O İlk Basit ve Hareketli Sarı Ev Sembolü -->
-        <div class="logo-icon">
-            <div class="windows"></div>
-            <div class="phone-button"></div>
-        </div>
-        
-        <div class="button-group">
-            <!-- Sahibinden Ofis Sayfası Butonu -->
-            <a href="https://akgunemlakyalvac.sahibinden.com/" target="_blank" class="nav-btn sahibinden-btn">
-                SAHİBİNDEN AKGÜN EMLAK
-            </a>
-
-            <!-- Emlakjet Ofis Sayfası Butonu -->
-            <a href="https://www.emlakjet.com/emlak-ofisleri/akgun-emlak-yalvac-1181810" target="_blank" class="nav-btn emlakjet-btn">
-                EMLAKJET AKGÜN EMLAK
-            </a>
-
-            <!-- Facebook Sayfası Butonu -->
-            <a href="https://www.facebook.com/p/AKG%C3%9CN-EMLAK-Gayrimenkul-100070590590640/" target="_blank" class="nav-btn facebook-btn">
-                FACEBOOK AKGÜN EMLAK
-            </a>
-        </div>
-    </div>
-
-    <footer>
-        <div class="services-text">
-            <span>SATILIK</span> ARSA, DÜKKAN VE DAİRELER
-        </div>
-        <div class="contact-info">
-            <div class="agent-name">Murat Akgün</div>
-            <a href="tel:05332124222" class="phone-link">0 533 212 42 22</a>
-        </div>
-    </footer>
-
-</body>
-</html>
